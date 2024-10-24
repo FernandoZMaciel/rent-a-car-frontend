@@ -13,6 +13,11 @@ import { FormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient } from '@angular/common/http';
 
+
+// NG-ZORRO IMPORTS
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+
+
 registerLocaleData(en);
 
 @NgModule({
@@ -24,7 +29,9 @@ registerLocaleData(en);
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+
+    NzLayoutModule
   ],
   providers: [
     provideClientHydration(),
