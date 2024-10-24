@@ -9,13 +9,18 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient } from '@angular/common/http';
 
 
 // NG-ZORRO IMPORTS
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzSpinModule } from 'ng-zorro-antd/spin';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+
 
 
 registerLocaleData(en);
@@ -30,8 +35,13 @@ registerLocaleData(en);
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
 
-    NzLayoutModule
+    NzLayoutModule,
+    NzFormModule,
+    NzInputModule,
+    NzSpinModule,
+    NzButtonModule
   ],
   providers: [
     provideClientHydration(),
